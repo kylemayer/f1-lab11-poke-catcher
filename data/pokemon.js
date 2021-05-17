@@ -1,5 +1,5 @@
 export default [
-    {
+{
     '_id':'5cef3501ef6005a77cd4fd17',
     'pokemon':'bulbasaur',
     'id':1,
@@ -31,9 +31,9 @@ export default [
     'shape':'quadruped',
     'pokebase':'bulbasaur',
     'pokedex':'http://www.pokemon.com/us/pokedex/bulbasaur'
-    },
+},
     
-    {
+{
     '_id':'5cef3501ef6005a77cd4fd19',
     'pokemon':'ivysaur',
     'id':2,
@@ -65,9 +65,9 @@ export default [
     'shape':'quadruped',
     'pokebase':'ivysaur',
     'pokedex':'http://www.pokemon.com/us/pokedex/ivysaur'
-    },
+},
 
-    {
+{
     '_id':'5cef3501ef6005a77cd4fd1a',
     'pokemon':'charmander',
     'id':5,
@@ -99,8 +99,9 @@ export default [
     'shape':'upright',
     'pokebase':'charmander',
     'pokedex':'http://www.pokemon.com/us/pokedex/charmander'
-    },
-    {
+},
+
+{
     '_id':'5cef3501ef6005a77cd4fd1b',
     'pokemon':'charmeleon',
     'id':6,
@@ -132,9 +133,9 @@ export default [
     'shape':'upright',
     'pokebase':'charmeleon',
     'pokedex':'http://www.pokemon.com/us/pokedex/charmeleon'
-    },
+},
 
-    {
+{
     '_id':'5cef3501ef6005a77cd4fd1c',
     'pokemon':'charizard',
     'id':7,
@@ -166,9 +167,9 @@ export default [
     'shape':'upright',
     'pokebase':'charizard',
     'pokedex':'http://www.pokemon.com/us/pokedex/charizard'
-    },
+},
 
-    {
+{
     '_id':'5cef3501ef6005a77cd4fd1f',
     'pokemon':'squirtle',
     'id':10,
@@ -202,7 +203,7 @@ export default [
     'pokedex':'http://www.pokemon.com/us/pokedex/squirtle'
 },
 
-    {
+{
     '_id':'5cef3501ef6005a77cd4fd20',
     'pokemon':'wartortle',
     'id':11,
@@ -234,9 +235,9 @@ export default [
     'shape':'upright',
     'pokebase':'wartortle',
     'pokedex':'http://www.pokemon.com/us/pokedex/wartortle'
-    },
+},
 
-    {
+{
     '_id':'5cef3501ef6005a77cd4fd21',
     'pokemon':'blastoise',
     'id':12,
@@ -268,9 +269,9 @@ export default [
     'shape':'upright',
     'pokebase':'blastoise',
     'pokedex':'http://www.pokemon.com/us/pokedex/blastoise'
-    },
+},
 
-    {
+{
     '_id':'5cef3501ef6005a77cd4fd23',
     'pokemon':'caterpie',
     'id':14,
@@ -302,9 +303,9 @@ export default [
     'shape':'squiggle',
     'pokebase':'caterpie',
     'pokedex':'http://www.pokemon.com/us/pokedex/caterpie'
-    },
+},
 
-    {
+{
     '_id':'5cef3501ef6005a77cd4fd24',
     'pokemon':'metapod',
     'id':15,
@@ -336,9 +337,9 @@ export default [
     'shape':'squiggle',
     'pokebase':'metapod',
     'pokedex':'http://www.pokemon.com/us/pokedex/metapod'
-    },
+},
 
-    {
+{
     '_id':'5cef3501ef6005a77cd4fd25',
     'pokemon':'beedrill',
     'id':19,
@@ -370,9 +371,9 @@ export default [
     'shape':'bug-wings',
     'pokebase':'beedrill',
     'pokedex':'http://www.pokemon.com/us/pokedex/beedrill'
-    },
+},
 
-    {
+{
     '_id':'5cef3501ef6005a77cd4fd26',
     'pokemon':'weedle',
     'id':17,
@@ -404,9 +405,9 @@ export default [
     'shape':'squiggle',
     'pokebase':'weedle',
     'pokedex':'http://www.pokemon.com/us/pokedex/weedle'
-    },
+},
 
-    {
+{
     '_id':'5cef3501ef6005a77cd4fd27',
     'pokemon':'kakuna',
     'id':18,
@@ -438,9 +439,9 @@ export default [
     'shape':'squiggle',
     'pokebase':'kakuna',
     'pokedex':'http://www.pokemon.com/us/pokedex/kakuna'
-    },
+},
 
-    {
+{
     '_id':'5cef3501ef6005a77cd4fd29',
     'pokemon':'pidgey',
     'id':21,
