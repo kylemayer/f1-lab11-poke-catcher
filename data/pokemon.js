@@ -237,7 +237,7 @@ export default [
     },
 
     {
-    {'_id':'5cef3501ef6005a77cd4fd21',
+    '_id':'5cef3501ef6005a77cd4fd21',
     'pokemon':'blastoise',
     'id':12,
     'species_id':9,
@@ -267,7 +267,7 @@ export default [
     'shape_id':6,
     'shape':'upright',
     'pokebase':'blastoise',
-    'pokedex':'http://www.pokemon.com/us/pokedex/blastoise'}
+    'pokedex':'http://www.pokemon.com/us/pokedex/blastoise'
     },
 
     {

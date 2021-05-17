@@ -11,7 +11,7 @@ const img3 = document.querySelector('#image3');
 
 const button = document.querySelector('#button');
 
-genThreePokemon();
+
 
 // initialize state
 
