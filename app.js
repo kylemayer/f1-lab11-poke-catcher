@@ -1,7 +1,5 @@
 import pokemonData from './data/pokemon.js';
 
-
-
 // import functions and grab DOM elements
 const poke1 = document.querySelector('#pokemon1');
 const poke2 = document.querySelector('#pokemon2');
@@ -13,6 +11,7 @@ const img3 = document.querySelector('#image3');
 
 const button = document.querySelector('#button');
 
+genThreePokemon();
 
 // initialize state
 
