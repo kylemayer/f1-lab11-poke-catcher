@@ -20,7 +20,7 @@ test('setPokedex should take an array and put the stringified version into local
             pokemon: 'charizard',
             encountered: 3,
             caught: 1,
-        }
+        },
             {
             pokemon: 'squirtle',
             encountered: 2,
