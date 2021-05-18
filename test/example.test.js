@@ -1,8 +1,6 @@
 // IMPORT MODULES under test here:
 // import { getPokedex, setPokedex, catchPoke, encounterPoke } from './local-utils.js';
 // import { findById, getRandomPokemon, genThreePokemon } from './utils.js';
-import { pokemonData } from './data/pokemon.js';
-
 import { setPokedex } from './local-utils.js';
 
 const test = QUnit.test;
