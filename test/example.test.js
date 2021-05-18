@@ -14,12 +14,12 @@ test('setPokedex should take an array and put the stringified version into local
             encountered: 1,
             caught: 1,
         },
-            {
+        {
             pokemon: 'charizard',
             encountered: 3,
             caught: 1,
         },
-            {
+        {
             pokemon: 'squirtle',
             encountered: 2,
             caught: 0,
@@ -29,7 +29,7 @@ test('setPokedex should take an array and put the stringified version into local
             encountered: 1,
             caught: 1,
         }
-    ]
+    ];
 
     setPokedex(pokemon);
 
