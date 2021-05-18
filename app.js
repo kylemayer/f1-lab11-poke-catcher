@@ -22,7 +22,7 @@ button.addEventListener('click', () => {
     capturePoke(selectedPokemon);
     const totalCaptured = getTotalCaptured();
     if (totalCaptured === 10) {
-        window.location.replace('/results');
+        window.location.replace('./results');
     } else {
         genThreePokemon();
     }

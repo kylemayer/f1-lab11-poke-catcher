@@ -82,7 +82,7 @@ new Chart(ctx2, {
 });
 
 resetButton.addEventListener('click', () => {
-    window.location.replace('/');
+    window.location.replace('../');
 
     setPokedex([]);
 });
