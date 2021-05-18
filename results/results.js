@@ -1,5 +1,5 @@
 import { getPokedex, setPokedex } from '../local-utils.js';
-import { mungePokeNames, mungePokeColors, mungePokeCaptured, mungePokeEncountered, mungeSecColors, mungePokeWeight} from '../data/munge-data.js';
+import { mungePokeNames, mungePokeColors, mungePokeCaptured, mungePokeEncountered, mungeSecColors, mungePokeWeight } from '../data/munge-data.js';
 
 let ctx = document.getElementById('myChart').getContext('2d');
 let ctx2 = document.getElementById('secondChart').getContext('2d');
@@ -14,7 +14,7 @@ const weight = mungePokeWeight(pokedex);
 // const image = mungePokeImg(pokedex);
 const resetButton = document.querySelector('#reset');
 
-const myChart = new Chart(ctx, {
+new Chart(ctx, {
     type: 'bar',
     data: {
         labels: names,
@@ -50,7 +50,7 @@ const myChart = new Chart(ctx, {
     }
 });
 
-const secondChart = new Chart(ctx2, {
+new Chart(ctx2, {
     type: 'line',
     data: {
         labels: names,
