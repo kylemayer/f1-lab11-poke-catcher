@@ -6,7 +6,7 @@ const input1 = document.querySelector('#pokemon1');
 const input2 = document.querySelector('#pokemon2');
 const input3 = document.querySelector('#pokemon3');
 
-const img1= document.querySelector('#image1');
+const img1 = document.querySelector('#image1');
 const img2 = document.querySelector('#image2');
 const img3 = document.querySelector('#image3');
 
@@ -29,8 +29,6 @@ function getRandomPokemon() {
   const randomPokemon = pokemonData[randomIndex];
   return randomPokemon;
 }
-
-
 
 function genThreePokemon() {
   let poke1 = getRandomPokemon();
