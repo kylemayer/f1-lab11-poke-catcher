@@ -36,7 +36,7 @@ function genThreePokemon() {
     let poke3 = getRandomPokemon();
 
     while (
-    poke1.id === poke2.id 
+        poke1.id === poke2.id 
       || poke1.id === poke3.id 
       || poke2.id === poke3.id
     ) {
