@@ -16,7 +16,7 @@ genThreePokemon();
 // initialize state
 
 // set event listeners 
-button.addEventListener('click',  () => {
+button.addEventListener('click', () => {
     const checkedRadio = document.querySelector(':checked');
     const checkedPokemon = checkedRadio.value;
 
@@ -35,16 +35,16 @@ function genThreePokemon() {
     let poke2 = getRandomPokemon();
     let poke3 = getRandomPokemon();
 
-  while (
-      poke1.id === poke2.id 
+    while (
+    poke1.id === poke2.id 
       || poke1.id === poke3.id 
       || poke2.id === poke3.id
-      ) {
-          poke1 = getRandomPokemon();
-          poke2 = getRandomPokemon();
-          poke3 = getRandomPokemon();
+    ) {
+        poke1 = getRandomPokemon();
+        poke2 = getRandomPokemon();
+        poke3 = getRandomPokemon();
 
-  }
+    }
 
     encounterPoke(poke1.id);
     encounterPoke(poke2.id);
