@@ -1,5 +1,5 @@
 import pokemonData from './data/pokemon.js';
-import { capturePoke, encounterPoke } from './local-utils.js';
+import { capturePoke, encounterPoke, getTotalCaptured } from './local-utils.js';
 
 // import functions and grab DOM elements
 const input1 = document.querySelector('#pokemon1');
@@ -19,9 +19,13 @@ genThreePokemon();
 button.addEventListener('click', () => {
     const checkedRadio = document.querySelector(':checked');
     const selectedPokemon = checkedRadio.value;
-
     capturePoke(selectedPokemon);
-    genThreePokemon();
+    const totalCaptured = getTotalCaptured();
+    if (totalCaptured === 10) {
+        window.location.replace('/results');
+    } else {
+        genThreePokemon();
+    }
 });
 
 function getRandomPokemon() {

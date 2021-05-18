@@ -1,30 +1,66 @@
-import { getPokedex } from '../local-utils.js';
-import { mungePokeNames, mungePokeColors, mungePokeCaptured } from '../data/munge-data.js';
+import { getPokedex, setPokedex } from '../local-utils.js';
+import { mungePokeNames, mungePokeColors, mungePokeCaptured, mungePokeEncountered, mungeSecColors, mungePokeWeight} from '../data/munge-data.js';
 
-var ctx = document.getElementById('myChart').getContext('2d');
+let ctx = document.getElementById('myChart').getContext('2d');
+let ctx2 = document.getElementById('secondChart').getContext('2d');
 
 const pokedex = getPokedex();
 const names = mungePokeNames(pokedex);
 const captured = mungePokeCaptured(pokedex);
 const colors = mungePokeColors(pokedex);
+const color2 = mungeSecColors(pokedex);
+const encountered = mungePokeEncountered(pokedex);
+const weight = mungePokeWeight(pokedex);
+// const image = mungePokeImg(pokedex);
+const resetButton = document.querySelector('#reset');
 
-new Chart(ctx, {
+const myChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: names,
         datasets: [{
             label: '# of Captures',
             data: captured,
-            backgroundColor: colors,
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
+            backgroundColor: ['rgb(59, 76, 202)'],
+            borderColor: colors,
             borderWidth: 1
+            
+        },
+        {
+            label: '# of Encounters',
+            data: encountered,
+            backgroundColor: [
+                'rgba(255, 222, 0)'],
+            borderColor: color2,
+            borderWidth: 1
+            
+        }]
+    },
+    options: {
+        // elements: {
+        //     bar: {
+        //         tension: 43
+        //     }
+        // },
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+const secondChart = new Chart(ctx2, {
+    type: 'line',
+    data: {
+        labels: names,
+        datasets: [{
+            label: 'Pokemon Weight',
+            data: weight,
+            backgroundColor: colors,
+            borderColor: colors,
+            borderWidth: 1
+            
         }]
     },
     options: {
@@ -34,4 +70,10 @@ new Chart(ctx, {
             }
         }
     }
+});
+
+resetButton.addEventListener('click', () => {
+    window.location.replace('/');
+
+    setPokedex([]);
 });
