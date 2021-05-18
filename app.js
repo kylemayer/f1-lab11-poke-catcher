@@ -1,5 +1,5 @@
 import pokemonData from './data/pokemon.js';
-import { catchPoke, encounterPoke } from './local-utils.js';
+import { capturePoke, encounterPoke, getTotalCaptured } from './local-utils.js';
 
 // import functions and grab DOM elements
 const input1 = document.querySelector('#pokemon1');
@@ -18,10 +18,14 @@ genThreePokemon();
 // set event listeners 
 button.addEventListener('click', () => {
     const checkedRadio = document.querySelector(':checked');
-    const checkedPokemon = checkedRadio.value;
-
-    catchPoke(checkedPokemon);
-    genThreePokemon();
+    const selectedPokemon = checkedRadio.value;
+    capturePoke(selectedPokemon);
+    const totalCaptured = getTotalCaptured();
+    if (totalCaptured === 10) {
+        window.location.replace('/results');
+    } else {
+        genThreePokemon();
+    }
 });
 
 function getRandomPokemon() {
@@ -37,8 +41,8 @@ function genThreePokemon() {
 
     while (
         poke1.id === poke2.id 
-      || poke1.id === poke3.id 
-      || poke2.id === poke3.id
+        || poke1.id === poke3.id 
+        || poke2.id === poke3.id
     ) {
         poke1 = getRandomPokemon();
         poke2 = getRandomPokemon();
@@ -62,5 +66,3 @@ function genThreePokemon() {
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
-
-  

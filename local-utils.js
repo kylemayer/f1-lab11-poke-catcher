@@ -15,10 +15,10 @@ export function setPokedex(newPokedex) {
     localStorage.setItem(POKEDEX, stringyPokedex); // setting POKEDEX and stringified new Pokedex into local storage
 }
 
-export function catchPoke(checkedPokemon) { // 
+export function capturePoke(selectedPokemon) { 
     const pokedex = getPokedex(); // setting pokedex equal to the pokedex that the getPokedex function returns
-    const samePokemon = findById(pokedex, checkedPokemon); // setting samePokemon equal to the 
-    samePokemon.caught++; //
+    const matchingPokemon = findById(pokedex, selectedPokemon); // setting samePokemon equal to the 
+    matchingPokemon.captured++; //
     setPokedex(pokedex); // saves/"sets" new pokedex values into local storage
 }
 
@@ -31,11 +31,20 @@ export function encounterPoke(checkedPokemon) {
         samePokemon.encountered++;
     } else {
         const newItem = {
-            caught: 0,
+            captured: 0,
             encountered: 1,
             id: checkedPokemon
         };
         pokedex.push(newItem);
     }
     setPokedex(pokedex);
+}
+
+export function getTotalCaptured() {
+    let total = 0;
+    const pokedex = getPokedex();
+    for (let poke of pokedex) {
+        total += poke.captured;
+    }
+    return total;
 }

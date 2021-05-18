@@ -1,31 +1,46 @@
-// // IMPORT MODULES under test here:
-// // import { getPokedex, setPokedex, catchPoke, encounterPoke } from './local-utils.js';
-// // import { findById, getRandomPokemon, genThreePokemon } from './utils.js';
-// // import {pokemonData } from './data/pokemon.js';
+// IMPORT MODULES under test here:
+// import { getPokedex, setPokedex, catchPoke, encounterPoke } from './local-utils.js';
+// import { findById, getRandomPokemon, genThreePokemon } from './utils.js';
+import { pokemonData } from './data/pokemon.js';
 
-// const test = QUnit.test;
+import { setPokedex } from './local-utils.js';
 
-// test('setPokedex should take an array and put the stringified version into local storage under the key POKEDEX', (expect) => {
-//     //Arrange
-//     // Set up your arguments and expectations
-//     const pokemon = [
-//         {
-//         name: 'squirtle'
-//         },
+const test = QUnit.test;
 
-//         {
-//         name: 'weedle'
-//         },
-// ];
+test('setPokedex should take an array and put the stringified version into local storage under the key POKEDEX', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const pokemon = [
+        {
+            pokemon: 'magikarp',
+            encountered: 1,
+            caught: 1,
+        },
+            {
+            pokemon: 'charizard',
+            encountered: 3,
+            caught: 1,
+        }
+            {
+            pokemon: 'squirtle',
+            encountered: 2,
+            caught: 0,
+        },
+        {
+            pokemon: 'weedle',
+            encountered: 1,
+            caught: 1,
+        }
+    ]
 
-//     setPokedex(pokemon);
-    
-//     //Act 
-//     // Call the function you're testing and set the result to a const
-//     const stringyPokedex = localStorage.getItem('POKEDEX');
-//     const parsedPokedex = JSON.parse(stringyPokedex);
+    setPokedex(pokemon);
 
-//     //Expect
-//     // Make assertions about what is expected versus the actual result
-//     expect.deepEqual(pokemon, parsedPokedex);
-// });
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const stringyPokedex = localStorage.getItem('POKEDEX');
+    const parsedPokedex = JSON.parse(stringyPokedex);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(pokemon, parsedPokedex);
+});

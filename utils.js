@@ -5,6 +5,5 @@ export function findById(someArray, someId) {
     for (let item of someArray) {
         if (item.id === numberId) return item;
     }
-
     return null;
 }
