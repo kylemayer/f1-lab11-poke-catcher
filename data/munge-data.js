@@ -22,9 +22,8 @@ export function mungeSecColors(pokemonArray) {
 export function mungePokeCaptured(pokemonArray) {
     // YOUR CODE HERE
     const results = [];
-    for(let poke of pokemonArray) {
+    for (let poke of pokemonArray) {
         results.push(poke.captured)
-        console.log(results);
     }
     return results;
 }
@@ -32,7 +31,7 @@ export function mungePokeCaptured(pokemonArray) {
 export function mungePokeNames(pokemonArray) {
     // YOUR CODE HERE
     const results = [];
-    for(let poke of pokemonArray) {
+    for (let poke of pokemonArray) {
         const data = findById(pokemon, poke.id);
             results.push(data.pokemon)
     }
@@ -42,16 +41,15 @@ export function mungePokeNames(pokemonArray) {
 export function mungePokeEncountered(pokemonArray) {
     // YOUR CODE HERE
     const results = [];
-    for(let poke of pokemonArray) {
+    for (let poke of pokemonArray) {
         results.push(poke.encountered)
-        console.log(results);
     }
     return results;
 }
 
 export function mungePokeWeight(pokemonArray) {
     const results = [];
-    for(let poke of pokemonArray) {
+    for (let poke of pokemonArray) {
         const data = findById(pokemon, poke.id)
         results.push(data.weight)
     }
@@ -60,7 +58,7 @@ export function mungePokeWeight(pokemonArray) {
 
 export function mungePokeImg(pokemonArray) {
     const results = [];
-    for(let poke of pokemonArray) {
+    for (let poke of pokemonArray) {
         const data = findById(pokemon, poke.id)
         results.push(data.url_image)
     }
