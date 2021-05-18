@@ -21,7 +21,7 @@ button.addEventListener('click', () => {
     const selectedPokemon = checkedRadio.value;
     capturePoke(selectedPokemon);
     const totalCaptured = getTotalCaptured();
-    if (totalCaptured === 10) {
+    if (totalCaptured >= 10) {
         window.location.replace('./results');
     } else {
         genThreePokemon();
