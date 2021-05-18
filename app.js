@@ -25,15 +25,15 @@ button.addEventListener('click',  () => {
 });
 
 function getRandomPokemon() {
-  const randomIndex = Math.floor(Math.random() * pokemonData.length);
-  const randomPokemon = pokemonData[randomIndex];
-  return randomPokemon;
+    const randomIndex = Math.floor(Math.random() * pokemonData.length);
+    const randomPokemon = pokemonData[randomIndex];
+    return randomPokemon;
 }
 
 function genThreePokemon() {
-  let poke1 = getRandomPokemon();
-  let poke2 = getRandomPokemon();
-  let poke3 = getRandomPokemon();
+    let poke1 = getRandomPokemon();
+    let poke2 = getRandomPokemon();
+    let poke3 = getRandomPokemon();
 
   while (
       poke1.id === poke2.id 
@@ -46,17 +46,17 @@ function genThreePokemon() {
 
   }
 
-  encounterPoke(poke1.id);
-  encounterPoke(poke2.id);
-  encounterPoke(poke3.id);
+    encounterPoke(poke1.id);
+    encounterPoke(poke2.id);
+    encounterPoke(poke3.id);
 
-  img1.src = poke1.url_image;
-  img2.src = poke2.url_image;
-  img3.src = poke3.url_image;
+    img1.src = poke1.url_image;
+    img2.src = poke2.url_image;
+    img3.src = poke3.url_image;
 
-  input1.value = poke1.id;
-  input2.value = poke2.id;
-  input3.value = poke3.id;
+    input1.value = poke1.id;
+    input2.value = poke2.id;
+    input3.value = poke3.id;
 
 }
   // get user input
