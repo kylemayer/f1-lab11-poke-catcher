@@ -55,15 +55,24 @@ const secondChart = new Chart(ctx2, {
     data: {
         labels: names,
         datasets: [{
-            label: 'Pokemon Weight',
+            label: 'Weight',
             data: weight,
-            backgroundColor: colors,
-            borderColor: colors,
+            backgroundColor: ['rgba(255, 0, 0, 0.2'],
+            borderColor: ['rgba(204, 0, 0, 0.2'],
             borderWidth: 1
             
         }]
     },
     options: {
+        elements: {
+            line: {
+                fill: true
+            },
+            point: {
+                radius: 15,
+                pointStyle: 'triangle', 
+            }
+        },
         scales: {
             y: {
                 beginAtZero: true
